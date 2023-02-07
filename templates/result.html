@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+
+	<style type="text/css">
+	body{
+	background-color:#0000004D;
+	}
+	.form-page{
+	margin:0 11em 0em 11em;
+	background-color:#00000061;
+	box-shadow: 0 8px 8px 0 rgb(70, 69, 69), 6px 13px 13px 6px rgb(229, 190, 153);}
+	
+	h1{
+	color:#FFFFFF;
+	font-size:50px;
+	text-align:center;
+	margin:0;
+	padding-top:10px;
+	padding-bottom:5px;
+	text-shadow: 3px 3px 0 #000,
+   -3px -3px 0 #000,  
+    3px -3px 0 #000,
+   -3px  3px 0 #000,
+    3px  3px 0 #000;
+	}
+    h2{
+    color:white;
+        text-shadow: 2px 2px 0 hsl(315, 93%, 59%),
+		-2px -2px 0 hsl(315, 93%, 59%),  
+		2px -2px 0 hsl(315, 93%, 59%),
+		-2px  2px 0 hsl(315, 93%, 59%),
+		2px  2px 0 hsl(315, 93%, 59%);}
+	
+	.container{
+	padding:1em 0 2em 3em;
+	display:flex;
+	}
+	  
+   marquee{
+	  border: 4px solid rgba(9, 8, 1, .3);
+	 padding-left:45%;
+	 font-size:1.1em;
+	 margin-left:4%;
+	 margin-top:15px;
+	 margin-bottom:none;
+	 font-family:cursive;
+	 }
+   
+	 .images{
+	float:left;
+	width:40%;
+	padding-top:.5em;
+	}
+	.t1{
+	float:right;
+	width:60%;
+	text-align:center;
+	margin-top:10px;
+	
+	}
+	.mySlides {
+	display:none;
+	box-shadow: 0 2px 2px 0 rgb(70, 69, 69), 0 10px 10px 0 rgb(49, 49, 49);
+	border-radius: 5em;
+	}
+   #gif{
+	padding-bottom: 11rem;
+   }
+   #gif1{
+	padding-bottom:1.2rem;
+   }
+   
+	</style>
+  
+
+</head>
+<body >
+
+    <h1> Diabetes Prediction</h1>
+    <div class='form-page'>
+          <marquee bgcolor='white'  width="45%" direction="left" height="25px" >
+                 your diabetes status is as follows
+		   </marquee>
+	 <div class='container'>
+	
+	     <div class='images'>
+			<img class='mySlides' src="{{url_for('static',filename='a1.jpg')}}" height='100%' width='90%'>
+			<img class='mySlides' src="{{url_for('static',filename='a2.jpg')}}"  height='100%' width='90%'>
+			<img class='mySlides' src="{{url_for('static',filename='a3.jpg')}}"  height='100%' width='90%'>
+	     </div>
+		 <script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 2000);
+			}
+			</script>
+		 
+	    <div class='t1'>
+            {% if prediction==1 %}
+            <h2>Prediction: <span>Opps! you have DIABETES</span></h2>
+            <img id='gif1' src="{{url_for('static',filename='5rt.gif')}}" width="80%">
+            {% elif prediction==0 %}
+            <h2>Prediction: <span>Wow! You Don't have Diabetes.</span></h2>
+            <img id='gif' src="{{url_for('static',filename='2DV.gif')}}" width="80%" height="70%">
+			{% endif %}
+
+		</div>
+	   </div>
+	</div>
+</body>
+</html>
