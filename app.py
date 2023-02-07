@@ -28,4 +28,5 @@ def predict():
 
         return render_template('result.html',prediction=my_prediction)
 if __name__=='__main__':
-    app.run()
+    app.run(host=os.getenv('IP', '0.0.0.0'), 
+            port=int(os.getenv('PORT', 4444)))
