@@ -4,3 +4,4 @@ seaborn
 flask
 sklearn
 matplotlib
+pickle
