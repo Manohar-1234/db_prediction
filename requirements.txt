@@ -1,7 +1,11 @@
-pandas
+streamlit==1.10.0
+plotly
+scikit-learn
+seaborn
 numpy
-seaborn 
+pandas
 flask
-sklearn
 matplotlib
-pickle
+seaborn
+sklearn
+mlxtend
