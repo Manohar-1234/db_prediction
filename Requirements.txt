@@ -4,4 +4,9 @@ seaborn
 flask
 sklearn
 streamlit
+streamlit==1.10.0
+plotly
+scikit-learn
+matplotlib
+mlxtend
 pickle
