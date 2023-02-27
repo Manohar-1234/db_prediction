@@ -2,7 +2,7 @@
 
 Flask is a Python-based microweb platform that allows users to add application functionality as if they were built into the framework itself. Below fig shows the basic file structures of the developed application and this development process comprises of four different program modules as follows:
 
-• model.pkl- This contains the machine learning model to predict diabetes. As SVM provided the highest accuracy of 78.125% with all the features, we will integrate this as predictive model in the model.pkl file.
+• model.pkl- This contains the machine learning model to predict diabetes. Random forest provided the highest accuracy of 92% with all the features, we will integrate this as predictive model in the model.pkl file.
 
 • app.py- This package includes Flask APIs that receive Diabetes information through GUI or API calls, compute the predicted value using our model, and return it.
 
