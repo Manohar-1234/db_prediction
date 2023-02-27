@@ -11,10 +11,17 @@ Flask is a Python-based microweb platform that allows users to add application f
 •Static- This folder contains the css file which has the styling required for our HTML form.
 
 DiabetesPrediction/
+
 			|--------model.pkl
+			
 			|--------static
+			
 			|--------template/
+			
 				|-----diabetes.html(main)
+				
 				|-----result.html
+				
 				|-----risk_score.html
+			
 			|--------app.py
