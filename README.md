@@ -1,5 +1,5 @@
-# db_pred
-Web application development using flask
+
+#Web application development using flask
 Flask is a Python-based microweb platform that allows users to add application functionality as if they were built into the framework itself. Below fig shows the basic file structures of the developed application and this development process comprises of four different program modules as follows:
 
 • model.pkl- This contains the machine learning model to predict diabetes. As SVM provided the highest accuracy of 78.125% with all the features, we will integrate this as predictive model in the model.pkl file.
